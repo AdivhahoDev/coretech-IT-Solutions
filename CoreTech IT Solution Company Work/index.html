@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoreTech IT Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #0a0f1c; color: white; }
+
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 50px; background: #111827;
+      position: sticky; top: 0;
+    }
+
+    nav h1 { color: #3b82f6; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+
+    section { padding: 80px 50px; }
+
+    .hero {
+      text-align: center;
+      background: linear-gradient(to right, #0a0f1c, #1e3a8a);
+      padding: 100px 20px;
+    }
+
+    .hero h2 { font-size: 2.5em; }
+    .hero p { margin: 20px 0; }
+
+    .btn {
+      padding: 12px 25px;
+      background: #3b82f6;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111827;
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: scale(1.05); }
+
+    form input, form textarea {
+      width: 100%; padding: 10px; margin: 10px 0;
+      border-radius: 5px; border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>CoreTech IT Solutions</h1>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="hero">
+    <h2>Innovating Your Digital Future</h2>
+    <p>We provide modern IT solutions for businesses and individuals.</p>
+    <button class="btn" onclick="scrollToSection('contact')">Get Started</button>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>CoreTech IT Solutions was founded to help businesses grow through technology.</p>
+    <p><strong>Vision:</strong> To be a leading IT solutions provider.</p>
+    <p><strong>Mission:</strong> Deliver high-quality digital services.</p>
+    <p>We specialize in web development, system design, and tech support.</p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">🌐 Website Development</div>
+      <div class="card">📱 App Development</div>
+      <div class="card">🖥 IT Support</div>
+      <div class="card">🔐 Cyber Security</div>
+      <div class="card">☁ Cloud Services</div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="card">Project 1</div>
+      <div class="card">Project 2</div>
+      <div class="card">Project 3</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: ramaanoadivhaho14@gmail.com</p>
+    <p>Phone: 076 367 5097</p>
+
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 CoreTech IT Solutions</p>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert('Message sent successfully!');
+    }
+  </script>
+
+</body>
+</html>
